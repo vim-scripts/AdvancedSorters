@@ -84,6 +84,17 @@ USAGE
                         Sort individual (whitespace-delimited) WORDs in the
                         current line / [range].
 
+:[range]Uniq[!] [i][r] [/{pattern}/]
+                        Remove lines in [range] that have already been
+                        encountered earlier (not necessarily adjacent).
+                        With [i] case is ignored.
+                        When /{pattern}/ is specified and there is no [r] flag
+                        the text matched with {pattern} is ignored.
+                        With [r] only the matching {pattern} is considered;
+                        the rest is ignored.
+                        If a {pattern} is used, any lines which don't have a
+                        match for {pattern} are kept.
+
 EXAMPLE
 We're taking any Vimscript file with multiple function definitions as an
 example, and show how to sort whole functions according to function name (and
